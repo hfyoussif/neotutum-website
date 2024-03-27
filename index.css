@@ -10,7 +10,7 @@ body{
     height: 100%;
     width: 100%;
     display: flex;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 .left-div{
 height: 100%;
@@ -20,7 +20,7 @@ height: 100%;
     background-size: cover;
     display: flex;
     justify-content: center;
-    padding-top: 5%;
+    /* padding-top: 5%; */
 }
 .left-inner-div{
     height: auto;
@@ -30,25 +30,50 @@ height: 100%;
         background-image: url("resources/bd.png");
         background-size: contain;
         background-repeat: no-repeat;
+        margin: 5%;
+        min-height: 400px;
     }
 .right-div{
     height: 100%;
     width: 55%;
-    background-color: black;
+    background-color:#0c0c0c;
     background-image: url("resources/right.jpg");
-    background-size: contain;
+    background-size:contain;
+    background-repeat: no-repeat;
     color: whitesmoke;
     /* text-align:start; */
     justify-content: start;
-    padding: 5%;
+    /* padding-top: 5%; */
     display:flex;
     flex-flow: column;
     align-items: center;
     }
 
+    .right-inner-top-div{
+        margin: 5%; 
+        text-align: center;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    }
+
     .right-inner-bottom-div{
-        margin-top: 20%;
+        margin: 5%; 
+        padding-top: 20%;
         text-align: center;
         font-size:32px;
         font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
     }
+
+    @media (max-width: 800px) {
+        .main {
+          flex-direction: column;
+        }
+        .left-div{
+            width: 100%;
+            justify-content: center;
+        }
+        .right-div{
+            width: 100%;
+        }
+        .left-inner-div{
+        }
+      }
